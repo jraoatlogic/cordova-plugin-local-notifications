@@ -19,6 +19,7 @@
     </engines>
 
     <dependency id="org.apache.cordova.device" url="https://github.com/apache/cordova-plugin-device" />
+    <dependency id="android.support.v4" url="https://github.com/MobileChromeApps/cordova-plugin-android-support-v4" />
 
     <js-module src="www/local-notification.js" name="LocalNotification">
         <clobbers target="plugin.notification.local" />
@@ -76,8 +77,6 @@
         <config-file target="AndroidManifest.xml" parent="/manifest">
             <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
         </config-file>
-
-        <lib-file src="libs/android/android-support-v4.jar" />
 
         <source-file src="src/android/LocalNotification.java" target-dir="src/de/appplant/cordova/plugin/localnotification" />
         <source-file src="src/android/Receiver.java"          target-dir="src/de/appplant/cordova/plugin/localnotification" />
